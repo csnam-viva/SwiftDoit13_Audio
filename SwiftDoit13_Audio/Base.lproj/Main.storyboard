@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -75,6 +76,36 @@
                                     <action selector="slChangeVolume:" destination="BYZ-38-t0r" eventType="valueChanged" id="K8M-gA-6pT"/>
                                 </connections>
                             </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SqV-TT-X1l">
+                                <rect key="frame" x="61" y="537" width="60" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="XJr-jd-LUi">
+                                <rect key="frame" x="161" y="537" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="swRecordModeChange:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GBv-dI-kXA"/>
+                                </connections>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JTB-oQ-tgf">
+                                <rect key="frame" x="145" y="592" width="79" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Record"/>
+                                <connections>
+                                    <action selector="btnRecordPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MAK-Wt-t5N"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Cb-JN-8kd">
+                                <rect key="frame" x="232" y="599" width="46" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -82,11 +113,13 @@
                     <connections>
                         <outlet property="btnPause" destination="UWY-ru-L02" id="EGd-e0-3uM"/>
                         <outlet property="btnPlay" destination="KLX-cb-YvE" id="MdR-Vn-R3M"/>
+                        <outlet property="btnRecord" destination="JTB-oQ-tgf" id="Suu-8h-wIF"/>
                         <outlet property="btnStop" destination="TXw-3v-pkE" id="qpU-Nw-Y6Z"/>
                         <outlet property="lblCurrentTime" destination="Shw-bB-OiY" id="et1-Pf-Cqy"/>
                         <outlet property="lblEndTime" destination="7Ll-k0-AJO" id="Ss9-JO-0Pu"/>
+                        <outlet property="lblRecordTime" destination="8Cb-JN-8kd" id="Hbe-5G-h1V"/>
                         <outlet property="pvProgressPlay" destination="7z4-40-bwY" id="cOC-Cq-VIt"/>
-                        <outlet property="slVolume" destination="9lk-gp-0uM" id="DE3-38-ru8"/>
+                        <outlet property="slVolume" destination="9lk-gp-0uM" id="XAW-O4-ixu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
